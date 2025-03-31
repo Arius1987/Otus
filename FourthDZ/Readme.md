@@ -33,7 +33,8 @@
 Конфиг лифа 10.10.10.10:
 
 
-![image](https://github.com/user-attachments/assets/f3417b43-89f3-4f60-996e-fd5b5644776d)
+![image](https://github.com/user-attachments/assets/edb91554-3839-44e0-b7df-ca8195565601)
+
 
 Таблица маршрутизации:
 
