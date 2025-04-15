@@ -1,9 +1,11 @@
 # Доманшяя работа №5
 ## Настройка L2 evpn // ДЗ
 Схема сети:
+
 ![image](https://github.com/user-attachments/assets/20c63ae7-9400-4b3f-ba41-2b474173321c)
 
 Ранинг конфиг первого спайна:
+
 >sh run
 ! Command: show running-config\
 ! device: 1-1-1-1 (vEOS-lab, EOS-4.28.0F)\
@@ -144,11 +146,14 @@ end\
 3-3-3-3#\
 
 Проверяем на лифе доступность evpn маршрутов:
+
 ![image](https://github.com/user-attachments/assets/fd4b8e11-ba85-4e06-bd3d-f9e63ff032af)
 
 Все в порядке.
 Проверим доступность конечного хоста L2 сегмента:
+
 ![image](https://github.com/user-attachments/assets/3920d980-3138-45b6-b6d5-6f779bcd8233)
 
 Проверим дамп vxlan:
+
 ![image](https://github.com/user-attachments/assets/586cff97-b525-45bf-93ef-c34efb867007)
