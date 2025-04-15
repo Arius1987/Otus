@@ -2,7 +2,8 @@
 ## Настройка L2 evpn // ДЗ
 Схема сети:
 
-![image](https://github.com/user-attachments/assets/20c63ae7-9400-4b3f-ba41-2b474173321c)
+![image](https://github.com/user-attachments/assets/973c05bb-b86d-4740-9143-40914c1858f3)
+
 
 Ранинг конфиг первого спайна:
 
