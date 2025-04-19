@@ -165,6 +165,11 @@ end\
 
 ![image](https://github.com/user-attachments/assets/882c5b6f-e3ff-44d5-8c7c-f07368f3598e)
 
+Проверим маршруты:
+
+![image](https://github.com/user-attachments/assets/731c61fe-468f-4943-83f3-24686dcc41cf)
+
+
 Пинг с хоста 172.16.0.3/29 к 172.16.1.2/30:
 
 ![image](https://github.com/user-attachments/assets/493c937d-99eb-4563-8324-eb6bf8567536)
