@@ -26,7 +26,7 @@
 ![image](https://github.com/user-attachments/assets/3157dcdb-c684-417f-9826-019febf31653)
 
 
-После чего проверить L3 ip связанность к хосту 172.16.0.2 из под 172.16.1.2:
+После чего проверим ip связанность к хосту 172.16.0.2 из под 172.16.1.2:
 
 ![image](https://github.com/user-attachments/assets/8c81ce63-abc8-460a-b5f3-31d0a1fe4e54)
 
