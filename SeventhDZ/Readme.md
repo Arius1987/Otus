@@ -34,7 +34,7 @@
 
 ![image](https://github.com/user-attachments/assets/2a6a9978-b9ad-4da1-b49a-0cf2ce16c925)
 
-И снова проверям ip связанность к 172.16.0.2:
+И снова повторно проверяем ip связанность к 172.16.0.2:
 
 ![image](https://github.com/user-attachments/assets/bbb4dc4f-250a-463e-9faf-b7de364d3036)
 
