@@ -26,7 +26,7 @@
 ![image](https://github.com/user-attachments/assets/e1fc9a19-c820-4274-a0e1-e21e34e2d3db)
 
 
-Агалогично поступаем на втором гипервизоре:
+Агалогично поступаем на втором гипервизоре (выполнив также все предыдущие настройки на нем):
 
 ![image](https://github.com/user-attachments/assets/d9872eff-4e11-4780-95bb-80a22f4e23c2)
 
