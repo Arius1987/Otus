@@ -208,6 +208,8 @@ systemctl restart frr
 Изменим mtu на 1390:
 
 
+![image](https://github.com/user-attachments/assets/097be5a2-5117-4c75-8615-82812f23a2be)
+
 
 apt install strongswan
 
@@ -237,7 +239,25 @@ conn input
 
   openssl rand -base64 128
 
-  И добавляем сгенерированный ключ в /etc/ipsec.secrets
+  И добавляем сгенерированный ключ в /etc/ipsec.secrets. Вид должен быть такой:
+
+  PSK "сгенерированный ключ"
+
+
+  ipsec update - запускаем
+
+  ipsec statusall - проверяем статус
+
+Запускаем пинги и смотрим. И вот:
+
+![image](https://github.com/user-attachments/assets/4d2edcb2-6947-4d85-8b74-ff3fa5761dca)
+
+
+![image](https://github.com/user-attachments/assets/211b5354-80d4-43f6-88b7-d6dbc63f00d0)
+
+
+  
+  
 
   
 
