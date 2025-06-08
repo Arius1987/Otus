@@ -194,7 +194,55 @@ systemctl restart frr
 
 ![image](https://github.com/user-attachments/assets/15764781-8b16-4e2f-a3a4-99c5b49d226e)
 
+![image](https://github.com/user-attachments/assets/e02db2f0-40b3-4b36-b2dd-ec55ba7147e8)
+
+
 Маршрут к хосту 172.17.0.1 обозначен как локальный, а к 172.17.0.2/32 пришедший по BGP. Я понимаю, что даренному коню в зубы не смотрят, но что это? :) 
+
+Вот дамп, видно, что все ok:
+
+![image](https://github.com/user-attachments/assets/d08a6df0-b804-4a1b-876e-e8df3c4aabb2)
+
+В заключение этой лабы попробуем зашифровать трафик. Как говорил эстонцец в анекдоте с дохлой вороной: "Пригодиццца". А нам реально таки пригодится:
+
+Изменим mtu на 1370:
+
+
+
+apt install strongswan
+
+Открываем /etc/ipsec.conf
+
+Дописываем:
+
+conn %default
+    ike=aes256-sha1-modp1024!  # the fastest, but reasonably secure cipher on modern HW
+    esp=aes256-sha1!
+    leftfirewall=yes           # this is necessary when using Proxmox VE firewall rules
+
+conn output
+    rightsubnet=%dynamic[udp/4789]
+    right=%any
+    type=transport
+    authby=psk
+    auto=route
+
+conn input
+    leftsubnet=%dynamic[udp/4789]
+    type=transport
+    authby=psk
+    auto=route
+
+  Генерируем ключ:
+
+  openssl rand -base64 128
+
+  И добавляем сгенерированный ключ в /etc/ipsec.secrets
+
+  
+
+
+
 
 
 
