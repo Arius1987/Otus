@@ -42,6 +42,7 @@ Route-target Import - импорт, rt. Можно написать нескол
 Опции далее, думаю, разбирать не стоит
 
 После чего идем в Datacenter-SDN-Vnets-Create
+
 ![image](https://github.com/user-attachments/assets/53324136-805a-4fb5-a09b-86e885ef6720)
 
 Где нужно выбрать имя Vnet, созданную ранее Zone и Tag (VxLanId)
@@ -54,12 +55,16 @@ Route-target Import - импорт, rt. Можно написать нескол
 
 Далее в Datacenter-SDN. Жмем Apply - это дейсвие создаст виртульный адаптер, который мы будем прикреплять к виртуалкам и контейнерам. 
 
+Откроем файл /etc/frr/frr.conf чтоб посмотреть, что мы там наконфигурировали в вэб-интерфейсе:
+
+![image](https://github.com/user-attachments/assets/0a83fcf2-4143-4571-9b90-d0393124c905)
+
+![image](https://github.com/user-attachments/assets/72e3809a-76b8-40be-bf6f-731bb41d79c8)
 
 
+Почему-то в этом файле я не нашел ip anycast gateway-я. 172.16.0.1 - признаться я так и не понял, куда пишутся эти строки конфига
 
-
-
-При построениии underlay я напоролся на первую проблему- дело в том, что не сморя на завлянную поддержку isis и bgp использовать их из графического интерфейса мы не можем, т.к. согласно оф.документации proxmox:
+Теперь настало время настраивать underlay и с ним я напоролся на первую проблему- дело в том, что не сморя на завлянную поддержку isis и bgp использовать их из графического интерфейса мы не можем, т.к. согласно оф.документации proxmox:
 
 ![image](https://github.com/user-attachments/assets/f0966a5c-9248-483a-b52a-fc486b49200c)
 
@@ -90,7 +95,57 @@ systemctl restart frr
 
 systemctl restart networking
 
-Далее будем настраивать frr, он настраивается на подобие роутеров на базе cisco ios
+Теперь запустим виртуальную консоль vtysh. Она эмулирует консоль cisco ios. записанные в ней настройки пишутся в /etc/frr/frr.conf
+
+![image](https://github.com/user-attachments/assets/a8c92ed8-463e-4c43-8fa5-956f9a2532dd)
+
+Ранинг конфиг мы уже смотрели при просмотре файла /etc/frr/frr.conf. Ознакомимся со списком интерфейсов:
+
+![image](https://github.com/user-attachments/assets/6e5d0a78-425b-40c0-add3-53e6fdb7ea5e)
+
+Где:
+ens4 - линк к роутеру R5
+lo - лупбэк
+vmbr0 - бринжд для менеджмента, а также по умолчанию он используется для подключения виртуальных машин
+myvnet - тот самый интерфейс с ip 172.16.0.1 - anycast gateway - который сохраняется непонятно где.
+Настроим ospf:
+
+![image](https://github.com/user-attachments/assets/04d24616-45bc-44d9-b6cf-c019cfa56033)
+
+![image](https://github.com/user-attachments/assets/7aac0b88-d17d-4871-af0a-c7c117e1b4ae)
+
+Выходим из меню конфигурирования:
+exit
+Сохранияем конфиг
+wr mem
+Выходим из vtysh
+exit
+
+Рестартуем frr:
+systemctl restart frr
+
+Далее по схеме следает настройка роутера R5. В ней нет ничего особенного, потому приведу его running config:
+
+![image](https://github.com/user-attachments/assets/370fd5a2-68b3-467f-be2d-62f634e02ad0)
+
+![image](https://github.com/user-attachments/assets/53a3b759-d174-4796-8386-3698e93588a1)
+
+![image](https://github.com/user-attachments/assets/161824e7-2347-4962-b669-6e31194968db)
+
+Проверим ip связанность с lo интерфейсом proxmox-а
+
+![image](https://github.com/user-attachments/assets/fb8fbb19-4fbb-4e31-bb5f-a6f8dfd42622)
+
+Работает
+
+
+
+
+
+
+
+
+
 
 
 
