@@ -107,9 +107,13 @@ systemctl restart networking
 
 Где:
 ens4 - линк к роутеру R5
+
 lo - лупбэк
+
 vmbr0 - бринжд для менеджмента, а также по умолчанию он используется для подключения виртуальных машин
+
 myvnet - тот самый интерфейс с ip 172.16.0.1 - anycast gateway - который сохраняется непонятно где.
+
 Настроим ospf:
 
 ![image](https://github.com/user-attachments/assets/04d24616-45bc-44d9-b6cf-c019cfa56033)
