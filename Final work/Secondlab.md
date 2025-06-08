@@ -13,6 +13,7 @@
 ![image](https://github.com/user-attachments/assets/b96c58e1-577e-489c-be68-8161f9eaf8db)
 
 3.3.3.3 - lo интерфейс прокмокса 192.168.5.24
+
 65000 - Наша AS (iBGP)
 
 Далее в Datacenter-SDN-Zones
