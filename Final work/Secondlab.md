@@ -5,7 +5,8 @@
 ![image](https://github.com/user-attachments/assets/50ad0532-c6fb-406e-ab5d-220ca40d9d5a)
 
 
-Сначала, как бы это странно не выглядело мы настроим overlay сеть силами графического интерфейса proxmox, данные настройки запишутся в файл /etc/frr/frr.conf, затем мы добавим добавим в него наш ospf-ый underlay. 
+Сначала, как бы это странно не выглядело мы настроим overlay сеть силами графического интерфейса proxmox, данные настройки запишутся в файл /etc/frr/frr.conf, затем мы добавим добавим в него наш ospf-ый underlay.
+
 Приступим: в вэб-интерфейсе proxmox (192.168.5.23) задим в Datacenter-SDN-Options. Жмем Controllers-Add-Evpn:
 
 ![image](https://github.com/user-attachments/assets/b96c58e1-577e-489c-be68-8161f9eaf8db)
