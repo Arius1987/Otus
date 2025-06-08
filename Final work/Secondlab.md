@@ -49,7 +49,7 @@ Route-target Import - импорт, rt. Можно написать нескол
 
 ![image](https://github.com/user-attachments/assets/53324136-805a-4fb5-a09b-86e885ef6720)
 
-Где нужно выбрать имя Vnet, созданную ранее Zone и Tag (VxLanId)
+Где нужно выбрать имя Vnet, созданную ранее Zone и Tag (идентификатор VlanIf)
 
 Далее в окошке справа "Suntets" создаем подсети для наших виртуалок (там же к ним можно и прикрутить dhcp сервер) 
 
