@@ -4,7 +4,8 @@
 
 ![image](https://github.com/user-attachments/assets/f0966a5c-9248-483a-b52a-fc486b49200c)
 
-Он существует только для экспорта маршрутов EVPN в домен ISIS. А что BGP:
+Он существует только для экспорта маршрутов EVPN в домен ISIS.
+А что BGP?
 
 ![image](https://github.com/user-attachments/assets/bb10c844-4a5a-4987-89bc-21fb3c0b13f9)
 
