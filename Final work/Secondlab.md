@@ -2,7 +2,8 @@
 
 Вот схема сети:
 
-![image](https://github.com/user-attachments/assets/50ad0532-c6fb-406e-ab5d-220ca40d9d5a)
+![image](https://github.com/user-attachments/assets/01cfdeaf-9f22-4d6f-8a89-3e977ed2408d)
+
 
 
 Сначала, как бы это странно не выглядело мы настроим overlay сеть силами графического интерфейса proxmox, данные настройки запишутся в файл /etc/frr/frr.conf, затем мы добавим добавим в него наш ospf-ый underlay.
@@ -134,7 +135,8 @@ systemctl restart frr
 
 Проверим ip связанность с lo интерфейсом proxmox-а
 
-![image](https://github.com/user-attachments/assets/fb8fbb19-4fbb-4e31-bb5f-a6f8dfd42622)
+![image](https://github.com/user-attachments/assets/6a5c7cd6-6f24-46cb-825c-cb596e5dba3d)
+
 
 Работает
 
