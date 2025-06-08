@@ -169,6 +169,35 @@ systemctl restart frr
 
 ![image](https://github.com/user-attachments/assets/338754d8-2425-4314-ada8-82baaf8c9335)
 
+Я не могу сказать, в чем тут проблема. Возможно на реальном релезе будет работать нормально - потому не буду редактировать текст выше.
+Еще раз правки, после которых пошли пинги:
+
+1. Обе сети указаны вручную
+
+![image](https://github.com/user-attachments/assets/34f2bc06-264b-4bd1-9c3b-34b0c814f4cc)
+
+2. Пиринг на реально существующие интерфейсы:
+
+![image](https://github.com/user-attachments/assets/4a01c8d2-2707-4bed-942c-a201e8b4a2b5)
+
+Рассмортим show команды для vtysh:
+
+![image](https://github.com/user-attachments/assets/62173390-7a8a-4cad-b934-cab6c9ae89e4)
+
+![image](https://github.com/user-attachments/assets/33de697f-a9b9-4ec2-be87-7c52fe00df8c)
+
+![image](https://github.com/user-attachments/assets/15764781-8b16-4e2f-a3a4-99c5b49d226e)
+
+Маршрут к хосту 172.17.0.1 обозначен как локальный, а к 172.17.0.2/32 пришедший по BGP. Я понимаю, что даренному коню в зубы не смотрят, но что это? :) 
+
+
+
+
+
+
+
+
+
 
 
 
