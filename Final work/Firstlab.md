@@ -49,11 +49,17 @@
 Здесь мы видим underlay ip адреса гирвизоров 172.16.0.1 и 172.16.0.2, vxlan инкапсуляцию исп. vni 20, vlan 100 и overlay ip виртуалок 10.0.0.1 и 10.0.0.2
 
 Как я писал в превью, для работы с vxlan proxmox использует пакет frr. Все настройки выполненные в вэб-интерфейсе оседают в конфигирационном файлах /etc/frr/frr.conf и /etc/network/interfaces.d/*
-В нашем случае нас интересует файл /etc/network/interfaces.d/sdn. Давайте посмотрим, что внутри:
 
-![image](https://github.com/user-attachments/assets/63ba36d3-a2c4-4acb-9b6b-3e60aad0b6a3)
+Посмотрим, что в /etc/frr/frr.conf:
 
-Ничего интересного. Как я написал - это вводная, самая простая лабораторная работа
+![image](https://github.com/user-attachments/assets/8af2ac79-6179-4d69-a304-bef9282760f4)
+
+Он пуст, проверим /etc/network/interfaces.d/sdn :
+
+![image](https://github.com/user-attachments/assets/2ad02b7e-4555-49fe-9b04-044f1a43da0f)
+
+
+Получается, что vxlan усть в linux и без установки доп.пакетов. Но без марштуной evpn инфомации о хостах и без регулировки BUM траффика. Для малых сетей пойдет 
 
 
 
