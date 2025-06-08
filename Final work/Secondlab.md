@@ -16,7 +16,7 @@
 
 Далее в Datacenter-SDN-Zones
 
-![image](https://github.com/user-attachments/assets/a7179ce3-58ed-49c3-9567-865ebf23d540)
+![image](https://github.com/user-attachments/assets/2e2380b1-2572-4fac-8bbc-423f5bffeee3)
 
 
 Вкратце о настройках:
@@ -37,6 +37,8 @@ Disable ARP ND Suppression - необходимо, если вы использ�
 Route-target Import - импорт, rt. Можно написать несколько через пробел
 
 Опции далее, думаю, разбирать не стоит
+
+
 
 
 
